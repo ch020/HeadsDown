@@ -6,7 +6,7 @@
 
 [functions]
   # Functions live at repo-root/netlify/functions
-  directory = "netlify/functions"
+  directory = "frontend/netlify/functions"
   node_bundler = "esbuild"
 
 [build.environment]
