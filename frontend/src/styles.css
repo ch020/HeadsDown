@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+:root { color-scheme: light dark;}
+
+body {
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(79,123,255,.25), transparent 60%),
+              radial-gradient(1200px 600px at 90% 90%, rgba(255,171,64,.2), transparent 60%),
+              linear-gradient(135deg, #0a0f1f 0%, #0c1430 100%);
+  background-attachment: fixed;
+  animation: floatBg 18s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg {
+    0% {background-position: 0% 0%, 100% 100%, 0% 0%;}
+    100% {background-position: 10% 15%, 90% 85%, 100% 100%;}
+}
+
+.game-card {
+    @apply rounded-3xl p-6 bg-slate-800/70 shadow-[0_8px_40px_rgba(0,0,0,0.35)] border border-white/10 backdrop-blur;
+}
+
+.word {
+    @apply text-6xl md:text-8xl font-black tracking-tight drop-shadow;
+}
